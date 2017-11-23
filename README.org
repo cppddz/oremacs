@@ -1,0 +1,2 @@
+An emacs configuration.
+Fork from abo-abo.
