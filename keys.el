@@ -14,7 +14,7 @@
 ;; (global-set-key "\C-k" 'kill-line)                    ; default
 ;; (global-set-key "\C-l" 'recenter-top-bottom)          ; default
 ;; (global-set-key "\C-m" 'newline-and-indent)           ; default
-(global-set-key (kbd "<S-return>") 'next-line)           ; default
+(global-set-key (kbd "<S-return>") 'end-of-line-and-indented-new-line)           ; default
 ;; (global-set-key "\C-o" 'aya-open-line)
                                         ; 'open-line
 ;; (keyboard-translate ?\C-h ?\C-p)
@@ -328,5 +328,7 @@ _v_ariable     valu_e_"
 (global-set-key (kbd "C-t") 'counsel-M-x)
 (global-set-key (kbd "<down-mouse-3>") 'ora-open-file-at-point)
 (global-set-key (kbd "C-c <C-return>") 'duplicate-line)
+;; (global-set-key (kbd "C-c <C-return>") 'duplicate-line-or-region)
+(global-set-key (kbd "M-k") 'copy-line-from-positon-to-end)
 
 (provide 'keys)
