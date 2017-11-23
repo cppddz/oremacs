@@ -1,3 +1,4 @@
+(add-hook 'archive-mode-hook 'ora-archive-hook)
 (add-hook 'compilation-mode-hook 'ora-compilation-hook)
 (add-hook 'ert-results-mode-hook 'ora-ert-results-hook)
 (add-hook 'dired-mode-hook 'ora-dired-hook)
@@ -8,6 +9,7 @@
 (add-hook 'clojure-mode-hook 'ora-clojure-hook)
 (add-hook 'scheme-mode-hook 'ora-scheme-hook)
 (add-hook 'python-mode-hook 'ora-python-hook)
+(add-hook 'groovy-mode-hook 'ora-groovy-hook)
 (add-hook 'inferior-python-mode-hook 'ora-inferior-python-hook)
 (add-hook 'hy-mode-hook 'ora-hy-hook)
 (add-hook 'ruby-mode-hook 'ora-ruby-hook)

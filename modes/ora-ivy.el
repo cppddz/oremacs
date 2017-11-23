@@ -11,6 +11,7 @@
 (define-key ivy-minibuffer-map (kbd "C-:") 'ivy-dired)
 (define-key ivy-minibuffer-map (kbd "C-c o") 'ivy-occur)
 (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+(define-key read-expression-map (kbd "C-r") 'counsel-minibuffer-history)
 (when (and (version< "24.5" emacs-version)
            (eq system-type 'gnu/linux)
            (char-displayable-p ?🙒))
@@ -78,5 +79,14 @@
     (lispy--insert part)
     (lispy-alt-multiline)
     (insert "\n")))
+
+(setq counsel-fzf-dir-function
+      (lambda ()
+        (let ((d (locate-dominating-file default-directory ".git")))
+          (if (or (null d)
+                  (equal (expand-file-name d)
+                         (expand-file-name "~/")))
+              default-directory
+            d))))
 
 (provide 'ora-ivy)
