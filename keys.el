@@ -14,11 +14,14 @@
 ;; (global-set-key "\C-k" 'kill-line)                    ; default
 ;; (global-set-key "\C-l" 'recenter-top-bottom)          ; default
 ;; (global-set-key "\C-m" 'newline-and-indent)           ; default
-;; (global-set-key "\C-n" 'next-line)                    ; default
-(global-set-key "\C-o" 'aya-open-line)                   ; 'open-line
-(keyboard-translate ?\C-h ?\C-p)                         ; swap
-(keyboard-translate ?\C-p ?\C-h)                         ; swap
-;; (global-set-key "\C-q" 'quoted-insert)                ; default
+(global-set-key (kbd "<S-return>") 'next-line)           ; default
+;; (global-set-key "\C-o" 'aya-open-line)
+                                        ; 'open-line
+;; (keyboard-translate ?\C-h ?\C-p)
+                                        ; swap
+;; (keyboard-translate ?\C-p ?\C-h)
+                                        ; swap
+;; (global-set-key "\C-q" 'quote-d-insert)                ; default
 (global-set-key "\C-r" 'swiper)                          ; 'isearch-backward
 (global-set-key "\C-s" 'counsel-grep-or-swiper)          ; 'isearch-forward
 (global-set-key "\C-t" 'smex)                            ; 'transpose-chars
