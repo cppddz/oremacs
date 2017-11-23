@@ -327,5 +327,6 @@ _v_ariable     valu_e_"
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-t") 'counsel-M-x)
 (global-set-key (kbd "<down-mouse-3>") 'ora-open-file-at-point)
+(global-set-key (kbd "C-c <C-return>") 'duplicate-line)
 
 (provide 'keys)
